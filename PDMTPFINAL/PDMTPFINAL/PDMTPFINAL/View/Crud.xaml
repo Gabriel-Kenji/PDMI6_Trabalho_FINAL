@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDMTPFINAL.View.Crud">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="ID" Font="18"></Label>
+            <Entry x:Name="txtID" Placeholder="ID" Text="0" IsEnabled="False"></Entry>
+            <Label x:Name="lblNomeMercadoria" Text="Nome Da Mercadoria" Font="18"></Label>
+            <Entry x:Name="txtNomeMercadoria" Placeholder="Insira o nome" ></Entry>
+            <Label x:Name="lblPesoMercadoria" Text="Peso Da Mercadoria" Font="18"></Label>
+            <Entry x:Name="txtPesoMercadoria" Placeholder="Insira o peso" ></Entry>
+            <Label x:Name="lblNomeProdutor" Text="Nome Do Produtor" Font="18"></Label>
+            <Entry x:Name="txtNomeProdutor" Placeholder="Insira o nome" ></Entry>
+            <Label x:Name="lblEmailProdutor" Text="Email Do Cliente" Font="18"></Label>
+            <Entry x:Name="txtEmailProdutor" Placeholder="Insira o Email"></Entry>
+            <Label x:Name="lblNCM" Text="NCM" Font="18"></Label>
+            <Entry x:Name="txtNCM" Placeholder="Insira o NCM"></Entry>
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
+                <Button 
+                x:Name="btnSalvar" 
+                Text="Inserir" 
+                HorizontalOptions="FillAndExpand" 
+                Clicked="btnSalvar_Clicked"
+                WidthRequest="150"
+                HeightRequest="50"
+                TextColor="White"
+                BackgroundColor="Green"
+                VerticalOptions="Center"
+                />
+                <Button 
+                x:Name="btnAtualizar" 
+                Text="Atulizar"  
+                HorizontalOptions="FillAndExpand" 
+                Clicked="btnAtualizar_Clicked"
+                WidthRequest="150"
+                HeightRequest="50"
+                TextColor="White"
+                BackgroundColor="Blue"
+                VerticalOptions="Center"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
+                <Button 
+                x:Name="btnDeletar"
+                Text="Deletar"
+                HorizontalOptions="FillAndExpand"
+                Clicked="btnDeletar_Clicked"
+                WidthRequest="150"
+                HeightRequest="50"
+                TextColor="White"
+                BackgroundColor="Red"
+                VerticalOptions="Center"
+                />
+                <Button 
+                x:Name="btnLimpar"
+                Text="Limpar"
+                HorizontalOptions="FillAndExpand"
+                Clicked="btnLimpar_Clicked"
+                 WidthRequest="150"
+                HeightRequest="50"
+                TextColor="White"
+                BackgroundColor="Gray"
+                VerticalOptions="Center"
+                />
+            </StackLayout>
+            <ListView x:Name="Listagem" ItemSelected="Listagem_ItemSelected"></ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
